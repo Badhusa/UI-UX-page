@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.chat-window {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.chat-window input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 80%;
+    margin-right: 10px;
+}
+
+.chat-window button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+}
+
+.table-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.table-input label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.table-input input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.table-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.table-fields label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.table-fields input[type="text"], .table-fields select {
+padding: 10px;
+border-radius: 5px;
+border: 1px solid gray;
+width: 100%;
+margin-bottom: 10px;
+}
+
+.table-fields select {
+width: 120px;
+}
+
+.table-fields button {
+padding: 10px;
+border-radius: 5px;
+border: none;
+background-color: blue;
+color: white;
+}
+
+.table-list {
+margin-bottom: 20px;
+}
+
+.table-list th, .table-list td {
+padding: 10px;
+border: 1px solid gray;
+}
+
+.table-list th {
+background-color: blue;
+color: white;
+}
+
+@media (max-width: 768px) {
+.container {
+height: auto;
+}
+.chat-window input[type="text"] {
+    width: 70%;
+}
+
+.table-fields input[type="text"], .table-fields select {
+    width: 100%;
+}
+}
