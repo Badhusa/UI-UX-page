@@ -10,13 +10,39 @@
     <!-- Bootstrap CSS -->    
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer> </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" defer> </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous" defer></script>
     <script src="js/script.js" defer></script>
     <title>Scramble to UI/UX Webpage</title>
 </head>
 <body>
+  
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">My App - SQL Chatbot</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
     <div class="container">
       <div class="row my-4">
         <div class="col-12 col-md-8">
@@ -38,16 +64,21 @@
             <div class="card-body">
               <h4 class="card-title mb-4">Table Input</h4>
               <form>
-                <div class="mb-3">
-                  <label for="table-num" class="form-label">How many tables are there?</label>
-                  <input type="number" class="form-control" id="table-num" name="table-num">
-                </div>
                 <div class="table-fields">
                   <div class="mt-3">
                     <label for="table-name-1" class="form-label">Table 1 name:</label>
-                    <input type="text" class="form-control" id="table-name-1" name="table-name-1">
+                    <input type="text" class="form-control" id="table-name-1" name="table-name-1" required>
+                    <div class="invalid-feedback">
+                      Please enter a table name.
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <label for="table-vars-1" class="form-label">Table 1 variables (comma-separated):</label>
+                    <input type="text" class="form-control" id="table-vars-1" name="table-vars-1">
                   </div>
                 </div>
+                <button class="btn btn-primary mt-4" id="add-table-btn">Add Table</button>
+                <button class="btn btn-success mt-4" id="submit-tables-btn">Submit</button>
                 <div class="mt-3">
                   <label for="sql-option" class="form-label">Select your preferred SQL option:</label>
                   <select class="form-select" id="sql-option" name="sql-option">
@@ -63,11 +94,12 @@
                     <option value="">Select a table</option>
                   </select>
                 </div>
-                <div id="table-variables"></div>
+               
               </form>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   </body>

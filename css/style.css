@@ -19,9 +19,8 @@ html, body {
     padding: 20px;
   }
   
-  /* Chat window styles */
-  
-  .chat-window {
+/* Chat window styles */
+.chat-window {
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -37,72 +36,116 @@ html, body {
     background-color: #ff0000;
     color: #fff;
     padding: 10px 20px;
+    position: relative; /* Added position property */
   }
   
   .chat-window-header h4 {
     margin: 0;
-    font-size: 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
   
-  .chat-window-body {
+  .chat-window-header button {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #fff;
+  }
+  
+  .chat-box::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .chat-box::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  .chat-box::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+    border: 1px solid #fff;
+  }
+  
+    
+    /* Added style for close button */
+    .chat-window-header .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    }
+    
+    .chat-window-body {
     flex: 1;
     padding: 20px;
     overflow-y: scroll;
-  }
-  
-  .chat-window-message {
+    }
+    
+    .chat-window-message {
     display: flex;
     margin-bottom: 20px;
-  }
-  
-  .chat-window-message-img {
+    }
+    
+    .chat-window-message img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
-  }
-  
-  .chat-window-message-text {
+    }
+    
+    .chat-window-message-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  
-  .chat-window-message-username {
+    }
+    
+    .chat-window-message-username {
     font-weight: bold;
     margin-bottom: 5px;
-  }
-  
-  .chat-window-message-text p {
+    }
+    
+    .chat-window-message-text p {
     margin: 0;
     padding: 10px;
     background-color: #f1f0f0;
     border-radius: 10px;
-  }
-  
-  .chat-window-footer {
+    }
+    
+    .chat-window-footer {
     display: flex;
     align-items: center;
     background-color: #f1f0f0;
     padding: 10px 20px;
-  }
-  
-  .chat-window-footer-input {
+    }
+    
+    .chat-window-footer-input {
     flex: 1;
     padding: 10px;
     border: none;
     border-radius: 5px;
-  }
-  
-  .chat-window-footer-submit {
+    }
+    
+    .chat-window-footer-submit {
     padding: 10px;
     border-radius: 5px;
     border: none;
     background-color: #007bff;
     color: #fff;
     margin-left: 10px;
-  }
-  
+    cursor: pointer; /* Added cursor property */
+    }
   /* Table input styles */
 
 .table-input {
