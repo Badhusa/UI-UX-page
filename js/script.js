@@ -1,5 +1,11 @@
 (function(tables) {
     'use strict';
+
+    $("#nav-toggle").click(function() {
+        $("#navbar-collapse").toggleClass("collapsed");
+        $(".navbar-toggle .icon-bar:nth-child(2)").toggleClass("rotate-back");
+        $(".navbar-collapse").slideToggle("slow");
+      });
     
     // Message input functionality
     $("#submit-message-btn").on("click", function(e) {
